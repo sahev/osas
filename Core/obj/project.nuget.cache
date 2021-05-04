@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wRpVDokSa09axqNsgmZHi6YlqpKFmXkOE72hB3RcU70MO5z//1uo+Tae7/2jSydiiESLgpQweh0pV2ug00uE4w==",
+  "success": true,
+  "projectFilePath": "D:\\samuel\\Osas_Covid\\Osas_Covid\\Core\\Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Samuel Evangelista\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Samuel Evangelista\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Samuel Evangelista\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
