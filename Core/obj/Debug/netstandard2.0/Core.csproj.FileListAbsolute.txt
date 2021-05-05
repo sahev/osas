@@ -1,7 +1,6 @@
 D:\samuel\Osas_Covid\Osas_Covid\Core\bin\Debug\netstandard2.0\Core.deps.json
 D:\samuel\Osas_Covid\Osas_Covid\Core\bin\Debug\netstandard2.0\Core.dll
 D:\samuel\Osas_Covid\Osas_Covid\Core\bin\Debug\netstandard2.0\Core.pdb
-D:\samuel\Osas_Covid\Osas_Covid\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
 D:\samuel\Osas_Covid\Osas_Covid\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
 D:\samuel\Osas_Covid\Osas_Covid\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
 D:\samuel\Osas_Covid\Osas_Covid\Core\obj\Debug\netstandard2.0\Core.dll

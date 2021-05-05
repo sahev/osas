@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using Core;
 
-namespace Osas_Covid.Controllers
+namespace Controllers
 {
     public class CovidController : ApiController
     {
-        [Route("api")]
+        [Route("api/covid/casos/mensais")]
         [HttpGet]
-        public List<Core.CovidService.RefCases> Get()
+        public List<Core.CovidService.grpCases> Get()
         {
             var covidService = new CovidService();
-            List<Core.CovidService.RefCases> response = covidService.Get();
+            List<Core.CovidService.grpCases> response = covidService.Get();
             return response;
         }
     }

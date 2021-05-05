@@ -1,32 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Core
 {
     public class CovidService
     {
-        public List<RefCases> Get()
+        public List<grpCases> Get() 
         {
             var res = new RestService();
-
-            List<ClassCases> rows = res.getAllCasesPerMonthAsync();
+            List<ClassCases> rows = res.getAllCasesPerMonth();
             return SetCasesQntPerMonth(rows);
         }
 
-        public List<RefCases> SetCasesQntPerMonth(List<ClassCases> data)
+        public List<grpCases> SetCasesQntPerMonth(List<ClassCases> data)
         {
-            List<RefCases> listCases = new List<RefCases>();
-
+            List<grpCases> listCases = new List<grpCases>();
 
             for (int i = 0; i < data.Count; i++)
             {
-                int month = data[i].Date.Month;
+                var dt = data[i].Date.ToString("MM/yyyy");
                 int total = GetDiffPerMonth(data[i != 0 ? i - 1 : 0].Cases, data[i].Cases);
 
-                listCases.Add(new RefCases { mes = month, total = total });
+                listCases.Add(new grpCases { mes = dt, total = total });
             }
-            return listCases;
+            return grpCasesPerMonth(listCases);
         }
 
         public int GetDiffPerMonth(int prev, int next)
@@ -34,11 +31,25 @@ namespace Core
             return next - prev;
         }
 
-        public class RefCases
+        public List<grpCases> grpCasesPerMonth(List<grpCases> data)
         {
-            public int mes { get; set; }
-            public int total { get; set; }
+            List<grpCases> grpCases = new List<grpCases>();
+            var cases = data.GroupBy(r => r.mes)
+                            .Select(g => new { data = g.Key, tot = g.Sum(x => x.total) });
 
+            grpCases.Clear();
+
+            foreach (var cas in cases)
+            {
+                grpCases.Add(new grpCases { mes = cas.data, total = cas.tot });
+            }
+            return grpCases;
+        }
+
+        public class grpCases
+        {
+            public string mes { get; set; }
+            public int total { get; set; }
         }
 
     }

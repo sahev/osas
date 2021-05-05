@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +9,7 @@ namespace Core
 {
     public class RestService
     {
-        public List<ClassCases> getAllCasesPerMonthAsync()
+        public List<ClassCases> getAllCasesPerMonth()
         {
             var url = "https://api.covid19api.com/country/brazil/status/confirmed";
 
